@@ -1,0 +1,18 @@
+{
+    "omar.orue@live.com.ar":{
+        "lun, 07abr, 2025":[
+            "visita",
+            "av Coronel Diaz 1345"
+        ]
+    },
+    "omarh0@gmx.com":{
+        "mar, 21may, 2025":[
+            "compra",
+            "av Federico Lacroze 3590"
+        ],
+        "jue, 14jul, 2025":[
+            "canjePuntos",
+            "av Cordoba 5874"
+        ]
+    }
+}

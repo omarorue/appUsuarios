@@ -1,0 +1,9 @@
+{
+    "1) ¿Se puede utilizar esta Aplicacion en todos los Hospitales?":"Si se puede utilizar en el Hospital Militar de la ciudad de Bs As y ademas en el Hospital Cosme Argerich",
+    "2) ¿Como se acumula el credito en la Aplicacion?":"Cada vez que se realiza una compra de tiempo de TV o de WiFi se aumenta un porcentaje al credito.",
+    "3) Pregunta3 . . . ":"Respuesta3",
+    "4) Pregunta4 . . . ":"Respuesta4",
+    "5) Pregunta5 . . . ":"Respuesta5",
+    "6) Pregunta6 . . . ":"Respuesta6",
+    "7) Pregunta7 . . . ":"Respuesta7"
+}

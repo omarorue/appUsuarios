@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include"/default/head.html" %}
+<body>
+    <div id="paginaInfoApp" class="container-fluid">
+        <div id="infoApp">
+            <div id="salidaCruz">
+                <a href="/muestraOpcionesApp"><img src="../static/img/icons/close-tab_oho.svg" width="28" height="28"></a>
+                <div id="tituloOpApp">
+                    <h2 style="text-align: center;">PERFIL</h2>
+                </div>
+            </div>
+            <section id="perfil"> 
+                <article>
+                    <p>Nombre y Apellido</p>
+                    <hr>
+                    <h5>{{nombre}} {{datos[0]}}</h5>
+                </article>
+                <article>
+                    <p>E-mail</p>
+                    <hr>
+                    <h5>{{mail}}</h5>
+                </article>
+                <article>
+                    <p>Habitación:  <span style="color: black; font-size: 1.2em;">{{datos[4]}}</span></p>
+                </article>
+                <article>
+                    <p>DNI</p>
+                    <hr>
+                    <h5>{{datos[1]}}</h5>
+                </article>
+                <article>
+                    <p>Telefono</p>
+                    <hr>
+                    <h5>{{datos[2]}}</h5>
+                </article>
+                <article>
+                    <p>Cumleaños</p>
+                    <hr>
+                    <!--
+                    {% set dias = {'MONDAY':'Lunes', 'TUESDAY':'Martes', 'WEDNESDAY':'Miercoles', 'THURSDAY':'Jueves', 'FRIDAY':'Viernes', 'SATURDAY':'Sabado', 'SUNDAY':'Domingo'} %}
+                    {% set dia = datos[3].strftime("%A").upper() %}
+                    {{ dias[dia] }},   
+                     -->
+                    <h5>{{datos[3].strftime("%d %b %Y")}}</h5>
+                </article>
+                <article>
+                    <div id="genero">
+                      <p>Genero</p>
+                    <img src="../static/img/icons/downChevron.svg " width="20" height="20">  
+                    </div>
+                    <hr>
+                    <h5>Ser humano</h5>
+                </article>
+                <div>
+                    <a href="ingresoCambioPass">
+                        <p>Cambiar Contraseña</p>
+                        <img src="../static/img/icons/rightChevron.svg" alt="cambio contraseña" width="20" height="20">
+                    </a> 
+                </div>
+                <br>
+                <hr>
+                
+            </section>
+         
+ 
+    </div>
+    
+    
+</body>
+</html>

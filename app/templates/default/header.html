@@ -1,0 +1,26 @@
+<header>
+        <nav class="navbar fixed-top" style="background-color: green;"> 
+            <div class="container-fluid">
+                <div id="tresPuntos">
+                    <a id="botTresPuntos" type="button" href="/muestraOpcionesApp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="50" fill="black" class="bi bi-list" viewBox="6 10 10 10">
+                            <path d="m12 16.495c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25zm0-6.75c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25zm0-6.75c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25z"/>
+                        </svg>
+                    </a>
+                    {% if 6 <= hora < 12 %}
+                        <h4>Buen Día {{ nombre }} !</h4>
+                    {% elif 12 <= hora < 20 %}
+                        <h4>Buenas Tardes {{ nombre }} !</h4>
+                    {% else %}
+                        <h4>Buenas Noches {{ nombre }} !</h4>
+                    {% endif %}
+                    
+                </div>
+                
+                <div id="botSalir">
+                    <a href="/logout"><h4>Salir</h4></a>
+                </div>
+                
+            </div>
+        </nav>
+    </header>

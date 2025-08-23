@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+<path d="M13.9995 16
+H6
+C3.79086 16 2 14.2091 2 12
+C2 9.79086 3.79086 8 6 8
+H13.9995M21.9995 12
+C21.9995 14.7614 19.7609 17 16.9995 17
+C14.2381 17 11.9995 14.7614 11.9995 12
+C11.9995 9.23858 14.2381 7 16.9995 7
+C19.7609 7 21.9995 9.23858 21.9995 12Z" 
+fill="blue"
+transform="rotate(180 12 12)"
+stroke="#800840" 
+stroke-width="1.2" 
+stroke-linecap="round" 
+stroke-linejoin="round"
+/>
+</svg>

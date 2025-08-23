@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+    {% include"/default/head.html" %}
+<body>
+    <div id="paginaInfoApp" class="container-fluid">
+    <div id="infoApp">
+        <a href="/dashboard"><img src="../static/img/icons/close-tab.svg" width="22" height="22"></a>
+        <div id="infoUsuario">
+            <div>
+                <img src="../static/img/icons/user.svg" alt="user" width="80" height="80">
+                <h4 id="usuarioNombre">{{nombre}} {{apellido}}</h4>
+            </div>
+            
+            {{mail}}
+            <div>
+                <a href="/perfil">
+                <button id="ingresoMiPerfil">Ingresar a mi Perfil</button>
+                </a>
+            </div>
+        </div>
+        <hr>
+        <ul class="opcionesApp">
+            <li>
+                <a href="/historial">
+                <img src="../static/img/icons/clock.svg" width="22" height="22">
+                Historial
+                </a>
+            </li>
+            <hr>
+            <li>    
+                <a href="/preferencias">
+                <img src="../static/img/icons/bell.svg" width="22" height="22">
+                Preferencias de comunicaciones
+                </a>
+            </li>
+            <hr>
+            <li>
+                <a href="/acerca">
+                <img src="../static/img/icons/warning.svg" width="22" height="22">
+                Acerca de la Aplicación
+                </a>
+            </li>
+            <hr>
+            <li>
+                <img src="../static/img/icons/telephone.svg" width="22" height="22">
+                Contactanos al 15-4545-2233
+                <p style="padding-left: 28px;">Lunes a viernes de 8:00 a 17:00</p>
+            </li>
+            <hr>
+            <li>
+                <a href="#">
+                <img src="../static/img/icons/envelope.svg" width="22" height="22">
+                Nuestro Email
+                </a>
+            </li>
+            <br>
+            <li><a href="/terminosPolitica">Terminos y Condiciones</a></li>
+            <li><a href="/terminosPolitica">Politica de Privacidad</a></li>
+        </ul>
+        <br>
+        <div style="padding-left: 2em;">
+            Seguinos en 
+            <a href="#"><img src="../static/img/icons/facebook.svg" alt="facebook" width="25" height="25"></a>
+            <a href="#"><img src="../static/img/icons/instagram.svg" alt="instagram" width="25" height="25"></a>
+            <a href="#"><img src="../static/img/icons/X_twitterLogo.svg" alt="twitter" width="25" height="25"></a>
+            <a href="#"><img src="../static/img/icons/youtube.svg" alt="youtube" width="25" height="25"></a>
+        </div>
+        <hr>
+        <p style="text-align: center;"> Copyright OHO Informatics &copy {{anio}}</p>
+    </div>
+    </div>
+    <!--  Link Script Bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <!--  Own Script -->
+    <script src="../static/script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include"/default/head.html" %}
+<body>
+    <div id="paginaInfoApp" class="container-fluid">
+        <div id="infoApp">
+            <div id="salidaCruz">
+                <div>
+                <a href="/muestraOpcionesApp"><img src="../static/img/icons/close-tab_oho.svg" width="28" height="28"></a>
+                </div>
+            </div>
+
+            <div id="tituloTermPol">
+                <div id="term">
+                    <button id="btnDer" onclick="cargarTexto('terminosCondiciones.txt')">Terminos y Condiciones</button>
+                </div>
+                <div id="pol">
+                    <button id="btnIzq" onclick="cargarTexto('politicaPrivacidad.txt')">Politica de Privacidad</button>
+                </div>
+            </div>
+
+            <div class="barra-container">
+                <div class="barra">
+                    <div class="cursor" id="cursor"></div>
+                </div>
+            </div>
+
+            <article id="contenido">
+                {{contenido}}
+            </article>
+        </div>
+    </div>
+    
+    <script>
+        let posicion = 0; 
+        const slider = document.getElementById('cursor');
+
+        document.getElementById('btnDer').addEventListener('click', function(e) {
+            e.preventDefault();
+            posicion = 1;
+            slider.style.left = '0%';
+        });
+
+        document.getElementById('btnIzq').addEventListener('click', function(e) {
+            e.preventDefault();
+            posicion = 0;
+            slider.style.left = '50%';
+        });
+
+        function cargarTexto(archivo) {
+            fetch(`../static/textos/${archivo}`)
+                .then(response => {
+                    if (!response.ok) throw new Error("Archivo no encontrado");
+                    return response.text();
+                })
+                .then(texto => {
+                    document.getElementById("contenido").innerHTML = texto;
+                })
+                .catch(error => {
+                    document.getElementById("contenido").innerHTML = "Error al cargar el archivo.";
+                    console.error(error);
+                });
+        }
+        // Cargar el primer texto por defecto al iniciar
+        cargarTexto('terminosCondiciones.txt');
+    </script>  
+</body>
+</html>

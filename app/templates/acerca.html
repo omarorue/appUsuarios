@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include"/default/head.html" %}
+<body>
+    <div id="paginaInfoApp" class="container-fluid">
+        <div id="infoApp">
+            <div id="salidaCruz">
+                <a href="/muestraOpcionesApp"><img src="../static/img/icons/close-tab_oho.svg" width="28" height="28"></a>
+                <div id="tituloOpApp">
+                    <h2>Acerca de la Aplicación</h2>
+                </div>
+            </div>
+            <section id="pregFrec"> 
+                <h4>Preguntas Frecuentes</h4>
+                {% for pregunta, respuesta in preguntas.items() %}
+                <article>
+                    <h5>Titulo {{ loop.index }}</h5>
+                    <a data-bs-toggle="popover" data-bs-trigget="focus" data-bs-placement="bottom" data-bs-content="{{ respuesta }}">
+                        <p>{{ pregunta }}</p>
+                        <img src="../static/img/icons/downChevron.svg" width="25" height="25">
+                    </a>
+                </article>
+                {% endfor%}
+            </section>
+        </div>
+    </div>
+    <script src="../static/script/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="mensaje"]'))
+        var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+    <script>
+       var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+       var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+       })
+    </script>
+</body>
+</html>

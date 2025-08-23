@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    {% include"/default/head.html" %}
+<body>
+    {% include"/default/header.html" %}
+    <div id="tamanoNav">
+    </div>
+    
+    <div id="creditoDisponible">
+        <div id="tipoSocio">
+            <p>Socio
+            <br>
+            Verde</p>
+        </div>
+        <h3>${{credito}}</h3>
+        <h5>Credito disponible</h5>
+    </div>
+    <div id="parte1">
+        <div id="textoCredito">
+            <p>${{credito}} expira en 119 dias.</p>
+            <p>Comenza a Canjear.</p>
+        </div>
+        <div id="promoConsumir">
+            Llena los colores del TV para obtener mas crédito.
+            <br>
+            <div>
+               <img src="../static/img/icons/tv-television_BW.svg" width="110" height="110"> 
+            </div>
+            Consumi $900 para obtener <span id="dineroReslatado"> $ 50 </span> <br> en Créditos
+        </div>
+        <div id="botDetalles">
+           <a href="#">DETALLES</a>
+        </div>
+        
+    </div>
+    <div id="parte2">
+
+    </div>
+    <div id="parte3">
+
+    </div>
+    <div id="parte4">
+
+    </div>
+
+    <!--  Link Script Bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <!--  Own Script -->
+    <script src="../static/script/script.js"></script>
+</body>
+</html>

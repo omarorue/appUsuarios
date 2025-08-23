@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include"/default/head.html" %}
+<body>
+    <div id="paginaInfoApp" class="container-fluid">
+        <div id="infoApp">
+            <div id="salidaCruz">
+                <a href="/muestraOpcionesApp"><img src="../static/img/icons/close-tab_oho.svg" width="28" height="28"></a>
+                <div id="tituloOpApp">
+                    <h2>Notificaciones</h2>
+                </div>
+            </div>
+            <ul class="opcionesApp">
+                <hr>
+                <li class="itemPref">
+                    <h5>Recibir Notificaciones</h5>
+                    <div class="toggle" data-state="off" data-id="1"></div>
+                </li>
+                <hr>
+                <li class="itemPref">
+                    <h5>Recibir SMS</h5>
+                    <div class="toggle" data-state="off" data-id="2"></div>
+                </li>
+                <hr>
+                <li class="itemPref">
+                    <h5>Recibir Notificadiones en la APP</h5>
+                    <div class="toggle" data-state="off" data-id="3"></div>                   
+                </li>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        document.querySelectorAll(".toggle").forEach(function(btn) {
+            btn.addEventListener("click", function() {
+                let isOn = this.classList.toggle("on");
+                let state = isOn ? "on" : "off";
+                this.setAttribute("data-state", state);
+
+                // Enviar al backend con el ID del toggle
+                let id = this.getAttribute("data-id");
+                fetch(`/toggle/${id}/${state}`)
+                    .then(res => console.log(`Toggle ${id} → ${state}`));
+            });
+        });
+    </script>
+</body>
+</html>
