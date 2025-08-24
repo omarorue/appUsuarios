@@ -199,7 +199,7 @@ def recuperar():
             # === Enviar Mensaje === #
             titulo = ' ❌ Error ❌'
             mensaje = 'No existe cuenta verificada con esos datos.'
-            link = '/ingresoRecuperar'
+            link = '/'
             return render_template('error.html', titulo=titulo, mensaje=mensaje, volver=link)
             #return "Error: No existe cuenta verificada con esos datos."
         
