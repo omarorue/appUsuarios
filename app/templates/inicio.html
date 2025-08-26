@@ -30,7 +30,12 @@
                     
                                 <a href="/login"><h4>Ingresar</h4></a>
                                 <a href="/registro"><h4>Registrarse</h4></a>
-                                <a href="/#"><p id="invitado">Navegar como Invitado</p></a>
+                                <form action="/login" method="POST">
+                                    <input type="hidden" name="email" value="1231234@456456.hey">
+                                    <input type="hidden" name="password" value="invitado">
+                                    <button type="submit" id="invitado">Ingresar como invitado</button>
+                                </form>
+                                
                                 <br>
                             </div>
 
