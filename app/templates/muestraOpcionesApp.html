@@ -11,11 +11,20 @@
                 <h4 id="usuarioNombre">{{nombre}} {{apellido}}</h4>
             </div>
             
-            {{mail}}
+            {% if nombre != "invitado" %}
+                <span>{{ mail }}</span>
+            {% endif %}
+
             <div>
-                <a href="/perfil">
-                <button id="ingresoMiPerfil">Ingresar a mi Perfil</button>
-                </a>
+                {% if nombre != "invitado" %}
+                    <a href="/perfil">
+                    <button id="ingresoMiPerfil">Ingresar a mi Perfil</button>
+                    </a>
+                {% else %}
+                    <a href="#">
+                        <button id="ingresoMiPerfil">Ingresar a mi Perfil</button>
+                    </a>
+                {% endif %}
             </div>
         </div>
         <hr>
