@@ -21,7 +21,7 @@ def enviar_email_verificacion(destinatario, nombre, token):
     msg['From'] = 'NoResponder@gmail.com'
     msg['To'] = destinatario
 
-    with smtplib.SMTP('smtp.gmail.com', 587) as server:
+    with smtplib.SMTP(Config.MAIL_SERVER, Config.MAIL_PORT) as server:
         server.starttls()
         server.login(Config.MAIL_ORIGEN, Config.MAIL_PASSWORD)
         server.send_message(msg)
@@ -46,7 +46,7 @@ def enviar_email_recuperacion(destinatario, nombre, token):
     msg["From"] = "no-reply@tu-dominio.com"
     msg["To"] = destinatario
 
-    with smtplib.SMTP('smtp.gmail.com', 587) as server:
+    with smtplib.SMTP(Config.MAIL_SERVER, Config.MAIL_PORT) as server:
         server.starttls()
         server.login(Config.MAIL_ORIGEN, Config.MAIL_PASSWORD)
         server.send_message(msg)

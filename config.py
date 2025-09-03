@@ -8,3 +8,5 @@ class Config:
     MYSQL_DB = 'appUsers'
     MAIL_ORIGEN = 'omarh.xx14@gmail.com'
     MAIL_PASSWORD = 'cscygiwtlmeanwoq'
+    MAIL_SERVER = 'smtp.gmail.com'
+    MAIL_PORT = 587
